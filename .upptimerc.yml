@@ -16,7 +16,7 @@ sites:
       - 200
 
 status-website:
-  # baseUrl: /esm-status
+  cname: esm-status.weber-online.com
   name: ESM-Suite Status
   introTitle: "**ESM-Suite** Statuspage"
   introMessage: Aktuelle Verfügbarkeit und Incidents der ESM-Suite Umgebungen.
