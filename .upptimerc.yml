@@ -1,0 +1,52 @@
+owner: WEBER-marcoscheffler
+repo: esm-status
+
+sites:
+  - name: ESM Frontend
+    url: https://esm.weber-online.com
+  - name: ESM Backend API
+    url: https://esm.weber-online.com/api/healthz
+    expectedStatusCodes:
+      - 200
+  - name: ESM Dev Frontend
+    url: https://esm-dev.weber-online.com
+  - name: ESM Dev Backend API
+    url: https://esm-dev.weber-online.com/api/healthz
+    expectedStatusCodes:
+      - 200
+
+status-website:
+  # baseUrl: /esm-status
+  name: ESM-Suite Status
+  introTitle: "**ESM-Suite** Statuspage"
+  introMessage: Aktuelle Verfügbarkeit und Incidents der ESM-Suite Umgebungen.
+  navbar:
+    - title: Status
+      href: /
+    - title: GitHub
+      href: https://github.com/WEBER-marcoscheffler/esm-status
+  theme: light
+
+i18n:
+  activeIncidents: Aktuelle Incidents
+  pastIncidents: Vergangene Incidents
+  scheduledMaintenance: Geplante Wartung
+  noIncidents: Keine Incidents
+  allSystemsOperational: Alle Systeme betriebsbereit
+  activeMaintenances: Aktive Wartungen
+  pastMaintenances: Vergangene Wartungen
+  liveStatus: Live-Status
+  uptimePerDay: Verfügbarkeit pro Tag
+  responseTimeMs: Antwortzeit (ms)
+  ms: ms
+  loading: Laden...
+  days: Tage
+  day: Tag
+  hours: Stunden
+  hour: Stunde
+  minutes: Minuten
+  minute: Minute
+  seconds: Sekunden
+  second: Sekunde
+  thisIsTheCurrentStatus: Aktueller Status
+  overallUptime: Gesamtverfügbarkeit
