@@ -1,33 +1,67 @@
 /*
  * ESM-Suite Status — Apple-inspired Theme (Dark + Light)
- * Inspired by macOS Sequoia / iOS 18 design language
+ * macOS Sequoia / iOS 18 design language
  * WEBER corporate indigo (#6366f1) as accent
- * Default: Dark — toggleable via data-theme attribute
+ *
+ * Uses html[data-theme] selectors for higher specificity
+ * than Upptime's built-in :root themes.
  */
 
 /* ══════════════════════════════════════
    DARK MODE (default)
+   Specificity: (0,1,1) > :root (0,1,0)
    ══════════════════════════════════════ */
 :root,
-[data-theme="dark"] {
+html[data-theme="dark"] {
+  /* Core */
   --body-background-color: #000000;
   --body-text-color: #f5f5f7;
   --card-background-color: rgba(28, 28, 30, 0.72);
-  --card-background-hover: rgba(28, 28, 30, 0.88);
   --card-border-color: rgba(255, 255, 255, 0.08);
-  --card-border-hover: rgba(255, 255, 255, 0.12);
   --nav-background-color: rgba(22, 22, 24, 0.82);
   --nav-border-bottom-color: rgba(255, 255, 255, 0.06);
+  --nav-current-border-bottom-color: #818cf8;
+
+  /* Status colors */
+  --up-border-left-color: #30d158;
+  --up-color-color: #f5f5f7;
+  --down-border-left-color: #ff453a;
+  --down-color-color: #f5f5f7;
+  --down-background-color: rgba(255, 69, 58, 0.1);
+  --degraded-border-left-color: #ff9f0a;
+  --degraded-color-color: #f5f5f7;
+
+  /* Tags */
+  --tag-color: #ffffff;
+  --tag-up-background-color: #30d158;
+  --tag-down-background-color: #ff453a;
+  --tag-degraded-background-color: #ff9f0a;
+
+  /* Misc */
+  --change-background-color: rgba(255, 159, 10, 0.12);
+  --code-color: #e5e5ea;
+  --code-background-color: rgba(255, 255, 255, 0.06);
+  --graph-opacity: 0.9;
+  --graph-filter: none;
+
+  /* Buttons */
+  --error-button-border-color: #6366f1;
+  --error-button-background-color: #4f46e5;
+  --error-button-color: #ffffff;
+  --submit-button-border-color: #6366f1;
+  --submit-button-background-color: #4f46e5;
+  --submit-button-color: #ffffff;
+
+  /* Custom (used in our overrides below) */
+  --card-background-hover: rgba(28, 28, 30, 0.88);
+  --card-border-hover: rgba(255, 255, 255, 0.12);
   --accent: #818cf8;
   --accent-strong: #6366f1;
   --green: #30d158;
   --green-bg: rgba(48, 209, 88, 0.08);
   --green-border: rgba(48, 209, 88, 0.15);
-  --red: #ff453a;
-  --orange: #ff9f0a;
   --secondary-text: rgba(245, 245, 247, 0.55);
   --tertiary-text: rgba(245, 245, 247, 0.35);
-  --separator: rgba(255, 255, 255, 0.06);
   --duration-hover-bg: rgba(255, 255, 255, 0.06);
   --duration-active-bg: rgba(255, 255, 255, 0.1);
   --scrollbar-thumb: rgba(255, 255, 255, 0.12);
@@ -42,25 +76,56 @@
 /* ══════════════════════════════════════
    LIGHT MODE
    ══════════════════════════════════════ */
-[data-theme="light"] {
+html[data-theme="light"] {
+  /* Core */
   --body-background-color: #f5f5f7;
   --body-text-color: #1d1d1f;
   --card-background-color: rgba(255, 255, 255, 0.72);
-  --card-background-hover: rgba(255, 255, 255, 0.92);
   --card-border-color: rgba(0, 0, 0, 0.06);
-  --card-border-hover: rgba(0, 0, 0, 0.1);
   --nav-background-color: rgba(255, 255, 255, 0.82);
   --nav-border-bottom-color: rgba(0, 0, 0, 0.06);
+  --nav-current-border-bottom-color: #4f46e5;
+
+  /* Status colors */
+  --up-border-left-color: #28a745;
+  --up-color-color: #1d1d1f;
+  --down-border-left-color: #d63031;
+  --down-color-color: #1d1d1f;
+  --down-background-color: rgba(214, 48, 49, 0.06);
+  --degraded-border-left-color: #e67e22;
+  --degraded-color-color: #1d1d1f;
+
+  /* Tags */
+  --tag-color: #ffffff;
+  --tag-up-background-color: #28a745;
+  --tag-down-background-color: #d63031;
+  --tag-degraded-background-color: #e67e22;
+
+  /* Misc */
+  --change-background-color: rgba(230, 126, 34, 0.1);
+  --code-color: #1d1d1f;
+  --code-background-color: rgba(0, 0, 0, 0.04);
+  --graph-opacity: 1;
+  --graph-filter: none;
+
+  /* Buttons */
+  --error-button-border-color: #4338ca;
+  --error-button-background-color: #4f46e5;
+  --error-button-color: #ffffff;
+  --submit-button-border-color: #4338ca;
+  --submit-button-background-color: #4f46e5;
+  --submit-button-color: #ffffff;
+
+  /* Custom */
+  --card-background-hover: rgba(255, 255, 255, 0.92);
+  --card-border-hover: rgba(0, 0, 0, 0.1);
   --accent: #4f46e5;
   --accent-strong: #4338ca;
   --green: #28a745;
   --green-bg: rgba(40, 167, 69, 0.06);
   --green-border: rgba(40, 167, 69, 0.15);
-  --red: #d63031;
-  --orange: #e67e22;
   --secondary-text: rgba(29, 29, 31, 0.55);
   --tertiary-text: rgba(29, 29, 31, 0.35);
-  --separator: rgba(0, 0, 0, 0.06);
   --duration-hover-bg: rgba(0, 0, 0, 0.04);
   --duration-active-bg: rgba(0, 0, 0, 0.07);
   --scrollbar-thumb: rgba(0, 0, 0, 0.12);
@@ -71,7 +136,7 @@
 }
 
 /* ══════════════════════════════════════
-   GLOBAL
+   GLOBAL STYLES
    ══════════════════════════════════════ */
 * {
   -webkit-font-smoothing: antialiased;
@@ -105,6 +170,11 @@ h2 {
   transition: color 0.4s ease;
 }
 
+h3 {
+  color: var(--secondary-text) !important;
+  transition: color 0.4s ease;
+}
+
 p, span, a {
   letter-spacing: -0.016em;
 }
@@ -119,7 +189,7 @@ a:hover {
 }
 
 /* ── Navigation ── */
-nav, .navbar, header {
+nav {
   background: var(--nav-background-color) !important;
   backdrop-filter: saturate(180%) blur(20px) !important;
   -webkit-backdrop-filter: saturate(180%) blur(20px) !important;
@@ -127,41 +197,26 @@ nav, .navbar, header {
   transition: background 0.4s ease, border-color 0.4s ease;
 }
 
-nav a, .navbar a {
+nav a {
   color: var(--body-text-color) !important;
   font-weight: 500 !important;
   font-size: 0.9rem !important;
   opacity: 0.85;
   transition: opacity 0.2s ease;
 }
-nav a:hover, .navbar a:hover {
+nav a:hover {
   opacity: 1;
 }
 
 /* ── Logo ── */
-nav img, .navbar img, header img {
+nav img {
   height: 28px !important;
   filter: var(--logo-filter);
   transition: filter 0.4s ease;
 }
 
-/* ── Status summary card ── */
-.status-overall,
-.status,
-.rounded-lg:first-of-type,
-main > div:first-of-type > div:first-of-type {
-  background: var(--green-bg) !important;
-  border: 0.5px solid var(--green-border) !important;
-  border-radius: var(--card-radius) !important;
-  transition: background 0.4s ease, border-color 0.4s ease;
-}
-
-/* ── Cards ── */
-.rounded-lg,
-.card,
-[class*="card"],
-main section > div,
-main > div > div {
+/* ── Cards / Articles ── */
+article {
   background: var(--card-background-color) !important;
   backdrop-filter: saturate(120%) blur(16px) !important;
   -webkit-backdrop-filter: saturate(120%) blur(16px) !important;
@@ -171,68 +226,61 @@ main > div > div {
   overflow: hidden;
 }
 
-.rounded-lg:hover,
-.card:hover,
-[class*="card"]:hover {
+article:hover {
   background: var(--card-background-hover) !important;
   border-color: var(--card-border-hover) !important;
 }
 
-/* ── Status indicator colors ── */
-.bg-green-200, .bg-green-300, .bg-green-400, .bg-green-500,
-[class*="green"] {
-  background-color: var(--green) !important;
+article.up {
+  border-left: 3px solid var(--up-border-left-color) !important;
+}
+article.down {
+  border-left: 3px solid var(--down-border-left-color) !important;
+}
+article.degraded {
+  border-left: 3px solid var(--degraded-border-left-color) !important;
 }
 
-.bg-red-200, .bg-red-300, .bg-red-400, .bg-red-500,
-[class*="red"] {
-  background-color: var(--red) !important;
+/* ── Status summary (all systems operational) ── */
+article.up:first-of-type,
+section:first-of-type article.up {
+  background: var(--green-bg) !important;
+  border: 0.5px solid var(--green-border) !important;
+  border-left: 3px solid var(--up-border-left-color) !important;
+  border-radius: var(--card-radius) !important;
 }
 
-.bg-yellow-200, .bg-yellow-300, .bg-yellow-400, .bg-yellow-500,
-[class*="yellow"] {
-  background-color: var(--orange) !important;
+/* ── Graph area ── */
+article .graph {
+  opacity: var(--graph-opacity) !important;
+  filter: var(--graph-filter) !important;
 }
 
-/* ── Green left border on up-status cards ── */
-.border-green-200, .border-green-300, .border-green-400, .border-green-500 {
-  border-left: 3px solid var(--green) !important;
-}
-
-/* ── Uptime chart area ── */
-svg, canvas {
-  opacity: 0.9;
-}
-
-/* ── Time period selector ── */
-.period-selector a,
-nav.flex a,
-[class*="duration"] a,
-a[href*="duration"] {
+/* ── Duration selector (24h, 7d, 30d, 1y, all) ── */
+.f.changed label,
+form label {
   color: var(--secondary-text) !important;
   font-weight: 500 !important;
   font-size: 0.85rem !important;
+  cursor: pointer;
   padding: 4px 10px;
   border-radius: 8px;
   transition: all 0.2s ease;
 }
 
-.period-selector a:hover,
-nav.flex a:hover,
-[class*="duration"] a:hover {
+form label:hover {
   color: var(--body-text-color) !important;
   background: var(--duration-hover-bg);
 }
 
-.period-selector a.active,
-[class*="duration"] a.active {
+input[type="radio"]:checked + label {
   color: var(--body-text-color) !important;
   background: var(--duration-active-bg);
 }
 
-/* ── Incident cards ── */
-.incident, [class*="incident"] {
-  border-radius: var(--card-radius) !important;
+/* ── Tags ── */
+.tag {
+  border-radius: 8px !important;
 }
 
 /* ── Footer ── */
@@ -248,14 +296,9 @@ footer a {
 }
 
 /* ── Page structure ── */
-main {
+.container {
   max-width: var(--page-max-width) !important;
-  margin: 0 auto !important;
-  padding: 2rem 1.25rem !important;
-}
-
-.intro, main > div:first-child {
-  margin-bottom: 2rem;
+  padding: 0 1.25rem !important;
 }
 
 /* ══════════════════════════════════════
@@ -301,10 +344,9 @@ main {
   width: 16px;
   height: 16px;
   flex-shrink: 0;
-  transition: opacity 0.3s ease;
 }
 
-/* ── Scrollbar (webkit) ── */
+/* ── Scrollbar ── */
 ::-webkit-scrollbar {
   width: 8px;
   height: 8px;
@@ -325,20 +367,15 @@ main {
   background: rgba(99, 102, 241, 0.35);
   color: #fff;
 }
-
-[data-theme="light"] ::selection {
+html[data-theme="light"] ::selection {
   background: rgba(79, 70, 229, 0.2);
   color: #1d1d1f;
 }
 
 /* ── Responsive ── */
 @media (max-width: 640px) {
-  h1 {
-    font-size: 1.65rem !important;
-  }
-  main {
-    padding: 1.5rem 1rem !important;
-  }
+  h1 { font-size: 1.65rem !important; }
+  .container { padding: 0 1rem !important; }
   .theme-toggle {
     bottom: 1rem;
     right: 1rem;
