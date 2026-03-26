@@ -18,6 +18,8 @@ sites:
 status-website:
   cname: esm-status.weber-online.com
   name: ESM-Suite Status
+  logoUrl: https://raw.githubusercontent.com/WEBER-marcoscheffler/esm-status/main/assets/weber-logo.png
+  favicon: https://raw.githubusercontent.com/WEBER-marcoscheffler/esm-status/main/assets/weber-favicon.ico
   introTitle: "**ESM-Suite** Statuspage"
   introMessage: Aktuelle Verfügbarkeit und Incidents der ESM-Suite Umgebungen.
   navbar:
@@ -25,28 +27,83 @@ status-website:
       href: /
     - title: GitHub
       href: https://github.com/WEBER-marcoscheffler/esm-status
-  theme: light
+  themeUrl: /assets/theme.css
+  css: ""
+  customHeadHtml: '<meta name="theme-color" content="#000000"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">'
 
 i18n:
+  # Status
   activeIncidents: Aktuelle Incidents
   pastIncidents: Vergangene Incidents
   scheduledMaintenance: Geplante Wartung
-  noIncidents: Keine Incidents
+  pastScheduledMaintenance: Vergangene Wartungen
   allSystemsOperational: Alle Systeme betriebsbereit
-  activeMaintenances: Aktive Wartungen
-  pastMaintenances: Vergangene Wartungen
   liveStatus: Live-Status
-  uptimePerDay: Verfügbarkeit pro Tag
+  locale: de-DE
+
+  # Uptime & Response
+  overallUptime: "Verfügbarkeit: $UPTIME"
+  overallUptimeTitle: Gesamtverfügbarkeit
+  averageResponseTime: "Antwortzeit: $TIMEms"
+  averageResponseTimeTitle: Antwortzeit
+  sevelDayResponseTime: Antwortzeit (7 Tage)
   responseTimeMs: Antwortzeit (ms)
   ms: ms
-  loading: Laden...
-  days: Tage
-  day: Tag
-  hours: Stunden
-  hour: Stunde
-  minutes: Minuten
-  minute: Minute
-  seconds: Sekunden
-  second: Sekunde
-  thisIsTheCurrentStatus: Aktueller Status
-  overallUptime: Gesamtverfügbarkeit
+  up: Erreichbar
+  down: Nicht erreichbar
+  degraded: Eingeschränkt
+
+  # Duration selectors
+  duration24H: 24h
+  duration7D: 7d
+  duration30D: 30d
+  duration1Y: 1y
+  durationAll: alle
+
+  # Incidents
+  incidentReport: "Incident #$NUMBER →"
+  activeIncidentSummary: Geöffnet am $DATE mit $POSTS Updates
+  incidentTitle: "Incident $NUMBER — Details"
+  incidentDetails: Incident-Details
+  incidentFixed: Behoben
+  incidentOngoing: Aktiv
+  incidentOpenedAt: Geöffnet am
+  incidentClosedAt: Geschlossen am
+  incidentViewOnGitHub: Auf GitHub ansehen und abonnieren
+  incidentCommentSummary: Gepostet am $DATE von $AUTHOR
+  incidentBack: "← Zurück zur Übersicht"
+  incidentCompleted: Abgeschlossen
+  incidentScheduled: Geplant
+  pastIncidentsResolved: Behoben in $MINUTES Minuten mit $POSTS Updates
+
+  # Scheduled maintenance
+  scheduledMaintenanceSummaryStarted: Gestartet am $DATE für $DURATION Minuten
+  scheduledMaintenanceSummaryStarts: Startet am $DATE für $DURATION Minuten
+  startedAt: Gestartet am
+  startsAt: Startet am
+  duration: Dauer
+  durationMin: $DURATION Minuten
+
+  # Misc
+  loading: Laden …
+  footer: "Diese Seite ist [Open Source]($REPO), betrieben mit [Upptime](https://upptime.js.org)"
+
+  # Rate limit
+  rateLimitExceededTitle: Anfragelimit erreicht
+  rateLimitExceededIntro: Du hast das stündliche Anfragelimit erreicht. Bitte warte oder füge einen GitHub Personal Access Token hinzu.
+  rateLimitExceededWhatDoesErrorMean: Was bedeutet dieser Fehler?
+  rateLimitExceededErrorMeaning: Diese Seite nutzt die GitHub API für Echtzeit-Statusdaten. GitHub erlaubt standardmäßig 60 Anfragen pro Stunde pro IP-Adresse.
+  rateLimitExceededErrorHowCanFix: Wie kann ich das beheben?
+  rateLimitExceededErrorFix: Warte eine Stunde oder füge deinen GitHub Personal Access Token hinzu (5.000 Anfragen/Stunde).
+  rateLimitExceededGeneratePAT: Personal Access Token erstellen
+  rateLimitExceededHasSet: Personal Access Token ist gesetzt.
+  rateLimitExceededRemoveToken: Token entfernen
+  rateLimitExceededGitHubPAT: GitHub Personal Access Token
+  rateLimitExceededCopyPastePAT: Token hier einfügen
+  rateLimitExceededSaveToken: Token speichern
+
+  # Error
+  errorTitle: Ein Fehler ist aufgetreten
+  errorIntro: Beim Laden der Statusdaten ist ein Fehler aufgetreten.
+  errorText: Bitte versuche es in wenigen Augenblicken erneut.
+  errorHome: Zur Startseite
