@@ -1,0 +1,237 @@
+/*
+ * ESM-Suite Status — Apple-inspired Dark Theme
+ * Inspired by macOS Sequoia / iOS 18 design language
+ * WEBER corporate indigo (#6366f1) as accent
+ */
+
+/* ── Foundation ── */
+:root {
+  --body-background-color: #000000;
+  --body-text-color: #f5f5f7;
+  --card-background-color: rgba(28, 28, 30, 0.72);
+  --card-border-color: rgba(255, 255, 255, 0.08);
+  --nav-background-color: rgba(22, 22, 24, 0.82);
+  --nav-border-bottom-color: rgba(255, 255, 255, 0.06);
+  --accent: #818cf8;
+  --accent-strong: #6366f1;
+  --green: #30d158;
+  --red: #ff453a;
+  --orange: #ff9f0a;
+  --secondary-text: rgba(245, 245, 247, 0.55);
+  --tertiary-text: rgba(245, 245, 247, 0.35);
+  --separator: rgba(255, 255, 255, 0.06);
+  --card-radius: 16px;
+  --page-max-width: 720px;
+}
+
+/* ── Global ── */
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'SF Pro Text',
+    'Inter', 'Helvetica Neue', Arial, sans-serif !important;
+  background: var(--body-background-color) !important;
+  color: var(--body-text-color) !important;
+  line-height: 1.47;
+  letter-spacing: -0.022em;
+}
+
+/* ── Typography ── */
+h1 {
+  font-weight: 700 !important;
+  font-size: 2rem !important;
+  letter-spacing: -0.032em !important;
+  color: var(--body-text-color) !important;
+}
+
+h2 {
+  font-weight: 600 !important;
+  font-size: 1.25rem !important;
+  letter-spacing: -0.022em !important;
+  color: var(--body-text-color) !important;
+}
+
+p, span, a {
+  letter-spacing: -0.016em;
+}
+
+a {
+  color: var(--accent) !important;
+  text-decoration: none !important;
+  transition: opacity 0.2s ease;
+}
+a:hover {
+  opacity: 0.75;
+}
+
+/* ── Navigation ── */
+nav, .navbar, header {
+  background: var(--nav-background-color) !important;
+  backdrop-filter: saturate(180%) blur(20px) !important;
+  -webkit-backdrop-filter: saturate(180%) blur(20px) !important;
+  border-bottom: 0.5px solid var(--nav-border-bottom-color) !important;
+}
+
+nav a, .navbar a {
+  color: var(--body-text-color) !important;
+  font-weight: 500 !important;
+  font-size: 0.9rem !important;
+  opacity: 0.85;
+  transition: opacity 0.2s ease;
+}
+nav a:hover, .navbar a:hover {
+  opacity: 1;
+}
+
+/* ── Logo ── */
+nav img, .navbar img, header img {
+  height: 28px !important;
+  filter: brightness(0) invert(1);
+}
+
+/* ── Status summary card (the "All systems operational" banner) ── */
+.status-overall,
+.status,
+.rounded-lg:first-of-type,
+main > div:first-of-type > div:first-of-type {
+  background: rgba(48, 209, 88, 0.08) !important;
+  border: 0.5px solid rgba(48, 209, 88, 0.15) !important;
+  border-radius: var(--card-radius) !important;
+}
+
+/* ── Cards (service status items) ── */
+.rounded-lg,
+.card,
+[class*="card"],
+main section > div,
+main > div > div {
+  background: var(--card-background-color) !important;
+  backdrop-filter: saturate(120%) blur(16px) !important;
+  -webkit-backdrop-filter: saturate(120%) blur(16px) !important;
+  border: 0.5px solid var(--card-border-color) !important;
+  border-radius: var(--card-radius) !important;
+  transition: background 0.3s ease, border-color 0.3s ease;
+  overflow: hidden;
+}
+
+.rounded-lg:hover,
+.card:hover,
+[class*="card"]:hover {
+  background: rgba(28, 28, 30, 0.88) !important;
+  border-color: rgba(255, 255, 255, 0.12) !important;
+}
+
+/* ── Status indicator colors ── */
+.bg-green-200, .bg-green-300, .bg-green-400, .bg-green-500,
+[class*="green"] {
+  background-color: var(--green) !important;
+}
+
+.bg-red-200, .bg-red-300, .bg-red-400, .bg-red-500,
+[class*="red"] {
+  background-color: var(--red) !important;
+}
+
+.bg-yellow-200, .bg-yellow-300, .bg-yellow-400, .bg-yellow-500,
+[class*="yellow"] {
+  background-color: var(--orange) !important;
+}
+
+/* ── Green left border on up-status cards ── */
+.border-green-200, .border-green-300, .border-green-400, .border-green-500 {
+  border-left: 3px solid var(--green) !important;
+}
+
+/* ── Uptime chart area ── */
+svg, canvas {
+  opacity: 0.9;
+}
+
+/* ── Time period selector (24h, 7d, 30d, 1y, all) ── */
+.period-selector a,
+nav.flex a,
+[class*="duration"] a,
+a[href*="duration"] {
+  color: var(--secondary-text) !important;
+  font-weight: 500 !important;
+  font-size: 0.85rem !important;
+  padding: 4px 10px;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+}
+
+.period-selector a:hover,
+nav.flex a:hover,
+[class*="duration"] a:hover {
+  color: var(--body-text-color) !important;
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.period-selector a.active,
+[class*="duration"] a.active {
+  color: var(--body-text-color) !important;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* ── Incident cards ── */
+.incident, [class*="incident"] {
+  border-radius: var(--card-radius) !important;
+}
+
+/* ── Footer ── */
+footer {
+  color: var(--tertiary-text) !important;
+  font-size: 0.82rem !important;
+  letter-spacing: -0.01em;
+}
+
+footer a {
+  color: var(--secondary-text) !important;
+}
+
+/* ── Subtle page structure ── */
+main {
+  max-width: var(--page-max-width) !important;
+  margin: 0 auto !important;
+  padding: 2rem 1.25rem !important;
+}
+
+/* ── Intro section ── */
+.intro, main > div:first-child {
+  margin-bottom: 2rem;
+}
+
+/* ── Scrollbar (webkit) ── */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.12);
+  border-radius: 999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* ── Selection ── */
+::selection {
+  background: rgba(99, 102, 241, 0.35);
+  color: #fff;
+}
+
+/* ── Responsive polish ── */
+@media (max-width: 640px) {
+  h1 {
+    font-size: 1.65rem !important;
+  }
+  main {
+    padding: 1.5rem 1rem !important;
+  }
+}
