@@ -130,6 +130,13 @@ status-website:
           "header{background:transparent!important;border:none!important;box-shadow:none!important}",
           "*{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}",
           "body{font-family:-apple-system,BlinkMacSystemFont,'SF Pro Display','Inter','Helvetica Neue',Arial,sans-serif!important;transition:background .5s ease,color .5s ease!important}",
+          "html[data-theme=dark] svg text,html[data-theme=dark] svg .tick text,html[data-theme=dark] .ct-label,html[data-theme=dark] .ct-grid{color:rgba(245,245,247,.6)!important;fill:rgba(245,245,247,.6)!important;stroke:rgba(245,245,247,.1)!important}",
+          "html[data-theme=dark] svg .ct-series .ct-line,html[data-theme=dark] svg .ct-series .ct-point{stroke:#5eead4!important}",
+          "html[data-theme=dark] svg .ct-series .ct-area{fill:rgba(94,234,212,.15)!important}",
+          "html[data-theme=dark] svg line,html[data-theme=dark] svg .domain{stroke:rgba(245,245,247,.1)!important}",
+          "html[data-theme=dark] .apexcharts-text,html[data-theme=dark] .apexcharts-xaxis-label,html[data-theme=dark] .apexcharts-yaxis-label{fill:rgba(245,245,247,.6)!important}",
+          "html[data-theme=dark] .apexcharts-gridline{stroke:rgba(245,245,247,.08)!important}",
+          "html[data-theme=dark] .apexcharts-tooltip{background:rgba(28,28,30,.9)!important;border-color:rgba(255,255,255,.12)!important;color:#f5f5f7!important}",
         ].join("");
         document.head.appendChild(s);
       }
