@@ -4,19 +4,19 @@
     "url": "https://esm.weber-online.com",
     "icon": "https://icons.duckduckgo.com/ip3/esm.weber-online.com.ico",
     "slug": "esm-frontend",
-    "status": "down",
-    "uptime": "99.95%",
-    "uptimeDay": "99.89%",
-    "uptimeWeek": "99.95%",
-    "uptimeMonth": "99.95%",
-    "uptimeYear": "99.95%",
-    "time": 509,
-    "timeDay": 555,
-    "timeWeek": 509,
-    "timeMonth": 509,
-    "timeYear": 509,
+    "status": "up",
+    "uptime": "98.55%",
+    "uptimeDay": "96.54%",
+    "uptimeWeek": "98.55%",
+    "uptimeMonth": "98.55%",
+    "uptimeYear": "98.55%",
+    "time": 499,
+    "timeDay": 458,
+    "timeWeek": 499,
+    "timeMonth": 499,
+    "timeYear": 499,
     "dailyMinutesDown": {
-      "2026-03-28": 2
+      "2026-03-28": 50
     }
   },
   {
@@ -24,19 +24,19 @@
     "url": "https://esm.weber-online.com/api/healthz",
     "icon": "https://icons.duckduckgo.com/ip3/esm.weber-online.com.ico",
     "slug": "esm-backend-api",
-    "status": "down",
-    "uptime": "99.97%",
-    "uptimeDay": "99.92%",
-    "uptimeWeek": "99.97%",
-    "uptimeMonth": "99.97%",
-    "uptimeYear": "99.97%",
-    "time": 128,
-    "timeDay": 165,
-    "timeWeek": 128,
-    "timeMonth": 128,
-    "timeYear": 128,
+    "status": "up",
+    "uptime": "98.56%",
+    "uptimeDay": "96.57%",
+    "uptimeWeek": "98.56%",
+    "uptimeMonth": "98.56%",
+    "uptimeYear": "98.56%",
+    "time": 126,
+    "timeDay": 132,
+    "timeWeek": 126,
+    "timeMonth": 126,
+    "timeYear": 126,
     "dailyMinutesDown": {
-      "2026-03-28": 1
+      "2026-03-28": 49
     }
   },
   {
@@ -44,19 +44,19 @@
     "url": "https://esm-dev.weber-online.com",
     "icon": "https://icons.duckduckgo.com/ip3/esm-dev.weber-online.com.ico",
     "slug": "esm-dev-frontend",
-    "status": "down",
-    "uptime": "99.98%",
-    "uptimeDay": "99.96%",
-    "uptimeWeek": "99.98%",
-    "uptimeMonth": "99.98%",
-    "uptimeYear": "99.98%",
-    "time": 497,
-    "timeDay": 588,
-    "timeWeek": 497,
-    "timeMonth": 497,
-    "timeYear": 497,
+    "status": "up",
+    "uptime": "98.58%",
+    "uptimeDay": "96.61%",
+    "uptimeWeek": "98.58%",
+    "uptimeMonth": "98.58%",
+    "uptimeYear": "98.58%",
+    "time": 493,
+    "timeDay": 516,
+    "timeWeek": 493,
+    "timeMonth": 493,
+    "timeYear": 493,
     "dailyMinutesDown": {
-      "2026-03-28": 1
+      "2026-03-28": 49
     }
   },
   {
@@ -64,19 +64,19 @@
     "url": "https://esm-dev.weber-online.com/api/healthz",
     "icon": "https://icons.duckduckgo.com/ip3/esm-dev.weber-online.com.ico",
     "slug": "esm-dev-backend-api",
-    "status": "down",
-    "uptime": "100.00%",
-    "uptimeDay": "100.00%",
-    "uptimeWeek": "100.00%",
-    "uptimeMonth": "100.00%",
-    "uptimeYear": "100.00%",
-    "time": 129,
-    "timeDay": 163,
-    "timeWeek": 129,
-    "timeMonth": 129,
-    "timeYear": 129,
+    "status": "up",
+    "uptime": "98.59%",
+    "uptimeDay": "96.64%",
+    "uptimeWeek": "98.59%",
+    "uptimeMonth": "98.59%",
+    "uptimeYear": "98.59%",
+    "time": 128,
+    "timeDay": 134,
+    "timeWeek": 128,
+    "timeMonth": 128,
+    "timeYear": 128,
     "dailyMinutesDown": {
-      "2026-03-28": 0
+      "2026-03-28": 48
     }
   }
 ]
