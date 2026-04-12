@@ -1,0 +1,12 @@
+[
+  {
+    "date": "2026-04-09",
+    "version": "v1.0.0",
+    "title": "Statuspage eingerichtet",
+    "changes": [
+      "Monitoring für ESM Frontend und Backend (Prod + Dev)",
+      "Glassmorphism-Design mit Dark/Light Mode",
+      "Deutsche Lokalisierung"
+    ]
+  }
+]
